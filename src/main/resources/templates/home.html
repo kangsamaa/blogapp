@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Simple Website</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+<h1>현재 일본 시간:</h1>
+<div id="japan-time"></div>
+
+<script>
+    function updateJapanTime() {
+        const now = new Date();
+        // 일본 표준시로 변환
+        const options = { timeZone: 'Asia/Tokyo', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+        const japanTime = now.toLocaleString('ja-JP', options);
+
+        document.getElementById('japan-time').textContent = japanTime;
+    }
+
+    // 페이지 로드 시 바로 호출 및 매초 갱신
+    updateJapanTime();
+    setInterval(updateJapanTime, 1000);
+</script>
+</body>
+</html>
