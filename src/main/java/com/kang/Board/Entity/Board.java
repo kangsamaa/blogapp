@@ -1,2 +1,4 @@
-package com.kang.Board.Entity;public class Board {
+package com.kang.Board.Entity;
+
+public class Board {
 }
