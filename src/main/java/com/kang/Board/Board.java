@@ -1,4 +1,4 @@
-package com.kang.Board.Entity;
+package com.kang.Board;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
